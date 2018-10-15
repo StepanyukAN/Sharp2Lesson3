@@ -1,0 +1,306 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Lesson_1</name>
+    </assembly>
+    <members>
+        <member name="F:Asteroids.Asteroid.random">
+            <summary>
+            Картинка астероида
+            </summary>
+        </member>
+        <member name="M:Asteroids.Asteroid.#ctor(System.Drawing.Point,System.Drawing.Point,System.Drawing.Size)">
+            <summary>
+            В конструкторе добавляем к каждому астероиду картинку
+            </summary>
+            <param name="pos">Позиция на экране</param>
+            <param name="dir">Приращение</param>
+            <param name="size">Размер</param>
+        </member>
+        <member name="M:Asteroids.Asteroid.Update">
+            <summary>
+            Реализованный абстрактный метод для обновления объекта на экране
+            </summary>
+        </member>
+        <member name="M:Asteroids.Asteroid.AddAsteroid">
+            <summary>
+            Метод загрузки случайной картинки астероида
+            </summary>
+        </member>
+        <member name="M:Asteroids.Asteroid.Clone">
+            <summary>
+            Метод клонирования астероида
+            </summary>
+            <returns>Возвращает копию объекта</returns>
+        </member>
+        <member name="T:Asteroids.BaseObject.Message">
+            <summary>
+            Делегат для события смерть корабля
+            </summary>
+        </member>
+        <member name="F:Asteroids.BaseObject.obj">
+            <summary>
+            Картинка объекта
+            </summary>
+        </member>
+        <member name="F:Asteroids.BaseObject._pos">
+            <summary>
+            Позиция на экране
+            </summary>
+        </member>
+        <member name="F:Asteroids.BaseObject._dir">
+            <summary>
+            Изменение координат
+            </summary>
+        </member>
+        <member name="F:Asteroids.BaseObject._size">
+            <summary>
+            Размер объекта
+            </summary>
+        </member>
+        <member name="P:Asteroids.BaseObject.Pos">
+            <summary>
+            Свойство для определения новой позиции на экране
+            </summary>
+        </member>
+        <member name="M:Asteroids.BaseObject.#ctor(System.Drawing.Point,System.Drawing.Point,System.Drawing.Size)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="pos">Позиция на экране</param>
+            <param name="dir">Изменение координат</param>
+            <param name="size">Размер объекта</param>
+        </member>
+        <member name="M:Asteroids.BaseObject.Draw">
+            <summary>
+            Абстрактный метод для рисования объекта
+            </summary>
+        </member>
+        <member name="M:Asteroids.BaseObject.Update">
+            <summary>
+            Абстрактный метод для обновления объекта на экране
+            </summary>
+        </member>
+        <member name="T:Asteroids.Bullet">
+            <summary>
+            Класс пуля
+            </summary>
+        </member>
+        <member name="M:Asteroids.Bullet.#ctor(System.Drawing.Point,System.Drawing.Point,System.Drawing.Size)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="pos">Позиция на экране</param>
+            <param name="dir">Изменение координат</param>
+            <param name="size">Размер объекта</param>
+        </member>
+        <member name="M:Asteroids.Bullet.Update">
+            <summary>
+            Обновление пули
+            </summary>
+        </member>
+        <member name="T:Asteroids.FirstAid">
+            <summary>
+            Класс аптечка
+            </summary>
+        </member>
+        <member name="T:Asteroids.Game.Log">
+            <summary>
+            Делегат для ведения лога
+            </summary>
+            <param name="message">Сообщение</param>
+        </member>
+        <member name="F:Asteroids.Game.asters">
+            <summary>
+            Количество астероидов (растет в зависимости от уровня)
+            </summary>
+        </member>
+        <member name="F:Asteroids.Game.level">
+            <summary>
+            Уровень
+            </summary>
+        </member>
+        <member name="F:Asteroids.Game.count">
+            <summary>
+            Счетчик для подсчета очков
+            </summary>
+        </member>
+        <member name="F:Asteroids.Game._context">
+            <summary>
+            Предоставляет доступ к главному буферу графического контекста
+            для текущего приложения
+            </summary>
+        </member>
+        <member name="F:Asteroids.Game.Buffer">
+            <summary>
+            Буфер для рисования
+            </summary>
+        </member>
+        <member name="F:Asteroids.Game._objs">
+            <summary>
+            Массив объектов
+            </summary>
+        </member>
+        <member name="F:Asteroids.Game._timer">
+            <summary>
+            таймер
+            </summary>
+        </member>
+        <member name="F:Asteroids.Game.rand">
+            <summary>
+            рандом
+            </summary>
+        </member>
+        <member name="F:Asteroids.Game._bullet">
+            <summary>
+            Пуля
+            </summary>
+        </member>
+        <member name="F:Asteroids.Game._asteroids">
+            <summary>
+            Массив астероидов
+            </summary>
+        </member>
+        <member name="F:Asteroids.Game._aid">
+            <summary>
+            Аптечка
+            </summary>
+        </member>
+        <member name="P:Asteroids.Game.Width">
+            <summary>
+            Ширина игрового поля
+            </summary>
+        </member>
+        <member name="P:Asteroids.Game.Height">
+            <summary>
+            Высота игрового поля
+            </summary>
+        </member>
+        <member name="F:Asteroids.Game.background">
+            <summary>
+            Фоновая картинка.
+            </summary>
+        </member>
+        <member name="F:Asteroids.Game._ship">
+            <summary>
+            Космический корабль
+            </summary>
+        </member>
+        <member name="M:Asteroids.Game.Timer_Tick(System.Object,System.EventArgs)">
+            <summary>
+            Целевой метод для события Timer.Tick
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Asteroids.Game.Init(System.Windows.Forms.Form)">
+            <summary>
+            Загрузка графики формы
+            </summary>
+            <param name="form">Экземпляр формы</param>
+        </member>
+        <member name="M:Asteroids.Game.Form_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Метод для обработки нажатия клавиш
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Asteroids.Game.Draw">
+            <summary>
+            Рисование объектов
+            </summary>
+        </member>
+        <member name="M:Asteroids.Game.Update">
+            <summary>
+            Обновление объектов
+            </summary>
+        </member>
+        <member name="M:Asteroids.Game.Load">
+            <summary>
+            Загрузка объектов в игру
+            </summary>
+        </member>
+        <member name="M:Asteroids.Game.Finish">
+            <summary>
+            Конец игры
+            </summary>
+        </member>
+        <member name="M:Asteroids.Game.AddToFile(System.String)">
+            <summary>
+            Метод ведения лога в файл
+            </summary>
+            <param name="message">Сообщение</param>
+        </member>
+        <member name="T:Asteroids.GameObjectException">
+            <summary>
+            Класс для внутриигровых ошибок
+            </summary>
+        </member>
+        <member name="M:Asteroids.ICollision.Collision(Asteroids.ICollision)">
+            <summary>
+            Метод для проверки столкновения объектов
+            </summary>
+            <param name="obj">Объект, реализующий интерфейс ICollision</param>
+            <returns>Возвращает истину, если прямоугольники, в которые вписаны объекты, пересекутся</returns>
+        </member>
+        <member name="P:Asteroids.ICollision.Rect">
+            <summary>
+            Прямоугольник, в который вписан объект
+            </summary>
+        </member>
+        <member name="T:Asteroids.Ship">
+            <summary>
+            Класс корабль
+            </summary>
+        </member>
+        <member name="E:Asteroids.Ship.MessageDie">
+            <summary>
+            Событие при смерти корабля
+            </summary>
+        </member>
+        <member name="F:Asteroids.Ship._energy">
+            <summary>
+            Энергия корабля
+            </summary>
+        </member>
+        <member name="M:Asteroids.Ship.Up">
+            <summary>
+            Движение вверх
+            </summary>
+        </member>
+        <member name="M:Asteroids.Ship.Down">
+            <summary>
+            Движение вниз
+            </summary>
+        </member>
+        <member name="M:Asteroids.Ship.Die">
+            <summary>
+            Метод смерти корабля
+            </summary>
+        </member>
+        <member name="F:Asteroids.Star.star">
+            <summary>
+            Для картинки звезды.
+            </summary>
+        </member>
+        <member name="M:Asteroids.Star.#ctor(System.Drawing.Point,System.Drawing.Point,System.Drawing.Size)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="pos">Позиция на экране</param>
+            <param name="dir">Изменение координат</param>
+            <param name="size">Размер объекта</param>
+        </member>
+        <member name="M:Asteroids.Star.Draw">
+            <summary>
+            Реализованный абстрактный метод для рисования объекта
+            </summary>
+        </member>
+        <member name="M:Asteroids.Star.Update">
+            <summary>
+            Реализованный абстрактный метод для обновления объекта на экране
+            </summary>
+        </member>
+    </members>
+</doc>
